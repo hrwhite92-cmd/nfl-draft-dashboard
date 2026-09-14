@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2026 NFL Win Total Draft — Live Dashboard</title>
+  <style>
+    :root {
+      --bg-color: #f4f6f9;
+      --card-bg: #ffffff;
+      --text-color: #1f2937;
+      --border-color: #e5e7eb;
+      --primary: #2563eb;
+      --table-header: #f8fafc;
+    }
+    
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      margin: 0;
+      padding: 20px;
+      line-height: 1.5;
+    }
+    
+    .container { max-width: 1200px; margin: 0 auto; }
+    
+    header {
+      background: var(--card-bg);
+      padding: 24px;
+      border-radius: 12px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      margin-bottom: 24px;
+    }
+    
+    h1 { margin: 0 0 8px 0; font-size: 1.75rem; color: #111827; }
+    p { margin: 0; color: #4b5563; font-size: 0.95rem; }
+    
+    .section-title {
+      font-size: 1.35rem;
+      margin: 32px 0 16px 0;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--border-color);
+      color: #111827;
+    }
+    
+    .card {
+      background: var(--card-bg);
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      margin-bottom: 20px;
+    }
+    
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.9rem;
+    }
+    
+    th, td {
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--border-color);
+    }
+    
+    th {
+      background-color: var(--table-header);
+      font-weight: 600;
+      color: #374151;
+    }
+    
+    .center { text-align: center; }
+    
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 20px;
+    }
+    
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 20px;
+    }
+    
+    @media (max-width: 640px) {
+      body { padding: 12px; }
+      th, td { padding: 8px 6px; font-size: 0.825rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>2026 NFL Win Total Draft — Live Dashboard</h1>
+      <p><strong>Players:</strong> Georgie, Sarah, Hayden, David, Ders, Bella (6 Players)</p>
+      <p><strong>Format:</strong> 5-round snake draft | 30 teams selected with Over/Under calls | Tiebreaker: Total Win Margin</p>
+    </header>
+
+    <!-- 1. LEADERBOARD -->
+    <h2 class="section-title">1. League Leaderboard</h2>
+    <div class="card">
+      <table>
+        <thead>
+          <tr>
+            <th class="center">Rank</th>
+            <th>Player</th>
+            <th class="center">Points (Hits)</th>
+            <th class="center">Current Record</th>
+            <th class="center">Tiebreaker Margin</th>
+            <th class="center">Picks Active</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="center">1</td><td><strong>Georgie</strong></td><td class="center">0</td><td class="center">0-0-0</td><td class="center">0.0</td><td class="center">5/5 pending</td></tr>
+          <tr><td class="center">2</td><td><strong>Sarah</strong></td><td class="center">0</td><td class="center">0-0-0</td><td class="center">0.0</td><td class="center">5/5 pending</td></tr>
+          <tr><td class="center">3</td><td><strong>Hayden</strong></td><td class="center">0</td><td class="center">0-0-0</td><td class="center">0.0</td><td class="center">5/5 pending</td></tr>
+          <tr><td class="center">4</td><td><strong>David</strong></td><td class="center">0</td><td class="center">0-0-0</td><td class="center">0.0</td><td class="center">5/5 pending</td></tr>
+          <tr><td class="center">5</td><td><strong>Ders</strong></td><td class="center">0</td><td class="center">0-0-0</td><td class="center">0.0</td><td class="center">5/5 pending</td></tr>
+          <tr><td class="center">6</td><td><strong>Bella</strong></td><td class="center">0</td><td class="center">0-0-0</td><td class="center">0.0</td><td class="center">5/5 pending</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 2. DRAFT BOARD -->
+    <h2 class="section-title">2. Draft Board (By Division)</h2>
+    <div class="grid-2">
+      <div class="card">
+        <h3>AFC East</h3>
+        <table>
+          <thead><tr><th>Team</th><th class="center">Line</th><th>Owner</th><th class="center">Call</th></tr></thead>
+          <tbody>
+            <tr><td>Buffalo Bills</td><td class="center">10.5</td><td>Available</td><td class="center">-</td></tr>
+            <tr><td>Miami Dolphins</td><td class="center">9.5</td><td>Available</td><td class="center">-</td></tr>
+            <tr><td>New York Jets</td><td class="center">9.5</td><td>Available</td><td class="center">-</td></tr>
+            <tr><td>New England Patriots</td><td class="center">4.5</td><td>Available</td><td class="center">-</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card">
+        <h3>AFC North</h3>
+        <table>
+          <thead><tr><th>Team</th><th class="center">Line</th><th>Owner</th><th class="center">Call</th></tr></thead>
+          <tbody>
+            <tr><td>Baltimore Ravens</td><td class="center">11.5</td><td>Available</td><td class="center">-</td></tr>
+            <tr><td>Cincinnati Bengals</td><td class="center">10.5</td><td>Available</td><td class="center">-</td></tr>
+            <tr><td>Cleveland Browns</td><td class="center">8.5</td><td>Available</td><td class="center">-</td></tr>
+            <tr><td>Pittsburgh Steelers</td><td class="center">8.5</td><td>Available</td><td class="center">-</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card">
+        <h3>AFC South</h3>
+        <table>
+          <thead><tr><th>Team</th><th class="center">Line</th><th>Owner</th><th class="center">Call</th></tr></thead>
+          <tbody>
+            <tr><td>Houston Texans</td><td class="center">9.5</td><td>Available</td><td class="center">-</td></tr>
+            <tr><td>Indianapolis Colts</td><td class="center">8.5</td><td>Available</td><td class="center">-</td></tr>
+            <tr><td>Jacksonville Jaguars</td><td class="center">8.5</td><td>Available</td><td class="center">-</td></tr>
+            <tr><td>Tennessee Titans</td><td class="center">6.5</td><td>Available</td><td class="center">-</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card">
+        <h3>AFC West</h3>
+        <table>
+          <thead><tr><th>Team</th><th class="center">Line</th><th>Owner</th><th class="center">Call</th></tr></thead>
+          <tbody>
+            <tr><td>Kansas City Chiefs</td><td class="center">11.5</td><td>Available</td><td class="center">-</td></tr>
+            <tr><td>Los Angeles Chargers</td><td class="center">8.5</td><td>Available</td><td class="center">-</td></tr>
+            <tr><td>Las Vegas Raiders</td><td class="center">6.5</td><td>Available</td><td class="center">-</td></tr>
+            <tr><td>Denver Broncos</td><td class="center">5.5</td><td>Available</td><td class="center">-</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card">
+        <h3>NFC East</h3>
+        <table>
+          <thead><tr><th>Team</th><th class="center">Line</th><th>Owner</th><th class="center">Call</th></tr></thead>
+          <tbody>
+            <tr><td>Philadelphia Eagles</td><td class="center">10.5</td><td>Available</td><td class="center">-</td></tr>
+            <tr><td>Dallas Cowboys</td><td class="center">10.5</td><td>Available</td><td class="center">-</td></tr>
+            <tr><td>Washington Commanders</td><td class="center">6.5</td><td>Available</td><td class="center">-</td></tr>
+            <tr><td>New York Giants</td><td class="center">6.5</td><td>Available</td><td class="center">-</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card">
+        <h3>NFC North</h3>
+        <table>
+          <thead><tr><th>Team</th><th class="center">Line</th><th>Owner</th><th class="center">Call</th></tr></thead>
+          <tbody>
+            <tr><td>Detroit Lions</td><td class="center">10.5</td><td>Available</td><td class="center">-</td></tr>
+            <tr><td>Green Bay Packers</td><td class="center">9.5</td><td>Available</td><td class="center">-</td></tr>
+            <tr><td>Chicago Bears</td><td class="center">8.5</td><td>Available</td><td class="center">-</td></tr>
+            <tr><td>Minnesota Vikings</td><td class="center">7.5</td><td>Available</td><td class="center">-</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card">
+        <h3>NFC South</h3>
+        <table>
+          <thead><tr><th>Team</th><th class="center">Line</th><th>Owner</th><th class="center">Call</th></tr></thead>
+          <tbody>
+            <tr><td>Atlanta Falcons</td><td class="center">9.5</td><td>Available</td><td class="center">-</td></tr>
+            <tr><td>Tampa Bay Buccaneers</td><td class="center">7.5</td><td>Available</td><td class="center">-</td></tr>
+            <tr><td>New Orleans Saints</td><td class="center">7.5</td><td>Available</td><td class="center">-</td></tr>
+            <tr><td>Carolina Panthers</td><td class="center">5.5</td><td>Available</td><td class="center">-</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card">
+        <h3>NFC West</h3>
+        <table>
+          <thead><tr><th>Team</th><th class="center">Line</th><th>Owner</th><th class="center">Call</th></tr></thead>
+          <tbody>
+            <tr><td>San Francisco 49ers</td><td class="center">11.5</td><td>Available</td><td class="center">-</td></tr>
+            <tr><td>Los Angeles Rams</td><td class="center">8.5</td><td>Available</td><td class="center">-</td></tr>
+            <tr><td>Seattle Seahawks</td><td class="center">7.5</td><td>Available</td><td class="center">-</td></tr>
+            <tr><td>Arizona Cardinals</td><td class="center">6.5</td><td>Available</td><td class="center">-</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- 3. ROSTERS -->
+    <h2 class="section-title">3. Player Rosters</h2>
+    <div class="grid-3">
+      <div class="card">
+        <h3>Georgie</h3>
+        <table>
+          <thead><tr><th class="center">#</th><th>Team</th><th class="center">Line</th><th class="center">Call</th><th class="center">Margin</th></tr></thead>
+          <tbody>
+            <tr><td class="center">1</td><td>TBD</td><td class="center">-</td><td class="center">-</td><td class="center">0.0</td></tr>
+            <tr><td class="center">2</td><td>TBD</td><td class="center">-</td><td class="center">-</td><td class="center">0.0</td></tr>
+            <tr><td class="center">3</td><td>TBD</td><td class="center">-</td><td class="center">-</td><td class="center">0.0</td></tr>
+            <tr><td class="center">4</td><td>TBD</td><td class="center">-</td><td class="center">-</td><td class="center">0.0</td></tr>
+            <tr><td class="center">5</td><td>TBD</td><td class="center">-</td><td class="center">-</td><td class="center">0.0</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card">
+        <h3>Sarah</h3>
+        <table>
+          <thead><tr><th class="center">#</th><th>Team</th><th class="center">Line</th><th class="center">Call</th><th class="center">Margin</th></tr></thead>
+          <tbody>
+            <tr><td class="center">1</td><td>TBD</td><td class="center">-</td><td class="center">-</td><td class="center">0.0</td></tr>
+            <tr><td class="center">2</td><td>TBD</td><td class="center">-</td><td class="center">-</td><td class="center">0.0</td></tr>
+            <tr><td class="center">3</td><td>TBD</td><td class="center">-</td><td class="center">-</td><td class="center">0.0</td></tr>
+            <tr><td class="center">4</td><td>TBD</td><td class="center">-</td><td class="center">-</td><td class="center">0.0</td></tr>
+            <tr><td class="center">5</td><td>TBD</td><td class="center">-</td><td class="center">-</td><td class="center">0.0</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card">
+        <h3>Hayden</h3>
+        <table>
+          <thead><tr><th class="center">#</th><th>Team</th><th class="center">Line</th><th class="center">Call</th><th class="center">Margin</th></tr></thead>
+          <tbody>
+            <tr><td class="center">1</td><td>TBD</td><td class="center">-</td><td class="center">-</td><td class="center">0.0</td></tr>
+            <tr><td class="center">2</td><td>TBD</td><td class="center">-</td><td class="center">-</td><td class="center">0.0</td></tr>
+            <tr><td class="center">3</td><td>TBD</td><td class="center">-</td><td class="center">-</td><td class="center">0.0</td></tr>
+            <tr><td class="center">4</td><td>TBD</td><td class="center">-</td><td class="center">-</td><td class="center">0.0</td></tr>
+            <tr><td class="center">5</td><td>TBD</td><td class="center">-</td><td class="center">-</td><td class="center">0.0</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card">
+        <h3>David</h3>
+        <table>
+          <thead><tr><th class="center">#</th><th>Team</th><th class="center">Line</th><th class="center">Call</th><th class="center">Margin</th></tr></thead>
+          <tbody>
+            <tr><td class="center">1</td><td>TBD</td><td class="center">-</td><td class="center">-</td><td class="center">0.0</td></tr>
+            <tr><td class="center">2</td><td>TBD</td><td class="center">-</td><td class="center">-</td><td class="center">0.0</td></tr>
+            <tr><td class="center">3</td><td>TBD</td><td class="center">-</td><td class="center">-</td><td class="center">0.0</td></tr>
+            <tr><td class="center">4</td><td>TBD</td><td class="center">-</td><td class="center">-</td><td class="center">0.0</td></tr>
+            <tr><td class="center">5</td><td>TBD</td><td class="center">-</td><td class="center">-</td><td class="center">0.0</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card">
+        <h3>Ders</h3>
+        <table>
+          <thead><tr><th class="center">#</th><th>Team</th><th class="center">Line</th><th class="center">Call</th><th class="center">Margin</th></tr></thead>
+          <tbody>
+            <tr><td class="center">1</td><td>TBD</td><td class="center">-</td><td class="center">-</td><td class="center">0.0</td></tr>
+            <tr><td class="center">2</td><td>TBD</td><td class="center">-</td><td class="center">-</td><td class="center">0.0</td></tr>
+            <tr><td class="center">3</td><td>TBD</td><td class="center">-</td><td class="center">-</td><td class="center">0.0</td></tr>
+            <tr><td class="center">4</td><td>TBD</td><td class="center">-</td><td class="center">-</td><td class="center">0.0</td></tr>
+            <tr><td class="center">5</td><td>TBD</td><td class="center">-</td><td class="center">-</td><td class="center">0.0</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card">
+        <h3>Bella</h3>
+        <table>
+          <thead><tr><th class="center">#</th><th>Team</th><th class="center">Line</th><th class="center">Call</th><th class="center">Margin</th></tr></thead>
+          <tbody>
+            <tr><td class="center">1</td><td>TBD</td><td class="center">-</td><td class="center">-</td><td class="center">0.0</td></tr>
+            <tr><td class="center">2</td><td>TBD</td><td class="center">-</td><td class="center">-</td><td class="center">0.0</td></tr>
+            <tr><td class="center">3</td><td>TBD</td><td class="center">-</td><td class="center">-</td><td class="center">0.0</td></tr>
+            <tr><td class="center">4</td><td>TBD</td><td class="center">-</td><td class="center">-</td><td class="center">0.0</td></tr>
+            <tr><td class="center">5</td><td>TBD</td><td class="center">-</td><td class="center">-</td><td class="center">0.0</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- 4. SEASON TRACKER -->
+    <h2 class="section-title">4. Season Tracker (32 Teams)</h2>
+    <div class="card">
+      <p style="margin-bottom: 12px; font-size: 0.875rem;">Log actual team wins here throughout the season to update the leaderboard and roster margins.</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Team</th>
+            <th>Division</th>
+            <th class="center">Line</th>
+            <th class="center">Record (W-L-T)</th>
+            <th class="center">Current Wins</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Arizona Cardinals</td><td>NFC West</td><td class="center">6.5</td><td class="center">0-0-0</td><td class="center">0</td></tr>
+          <tr><td>Atlanta Falcons</td><td>NFC South</td><td class="center">9.5</td><td class="center">0-0-0</td><td class="center">0</td></tr>
+          <tr><td>Baltimore Ravens</td><td>AFC North</td><td class="center">11.5</td><td class="center">0-0-0</td><td class="center">0</td></tr>
+          <tr><td>Buffalo Bills</td><td>AFC East</td><td class="center">10.5</td><td class="center">0-0-0</td><td class="center">0</td></tr>
+          <tr><td>Carolina Panthers</td><td>NFC South</td><td class="center">5.5</td><td class="center">0-0-0</td><td class="center">0</td></tr>
+          <tr><td>Chicago Bears</td><td>NFC North</td><td class="center">8.5</td><td class="center">0-0-0</td><td class="center">0</td></tr>
+          <tr><td>Cincinnati Bengals</td><td>AFC North</td><td class="center">10.5</td><td class="center">0-0-0</td><td class="center">0</td></tr>
+          <tr><td>Cleveland Browns</td><td>AFC North</td><td class="center">8.5</td><td class="center">0-0-0</td><td class="center">0</td></tr>
+          <tr><td>Dallas Cowboys</td><td>NFC East</td><td class="center">10.5</td><td class="center">0-0-0</td><td class="center">0</td></tr>
+          <tr><td>Denver Broncos</td><td>AFC West</td><td class="center">5.5</td><td class="center">0-0-0</td><td class="center">0</td></tr>
+          <tr><td>Detroit Lions</td><td>NFC North</td><td class="center">10.5</td><td class="center">0-0-0</td><td class="center">0</td></tr>
+          <tr><td>Green Bay Packers</td><td>NFC North</td><td class="center">9.5</td><td class="center">0-0-0</td><td class="center">0</td></tr>
+          <tr><td>Houston Texans</td><td>AFC South</td><td class="center">9.5</td><td class="center">0-0-0</td><td class="center">0</td></tr>
+          <tr><td>Indianapolis Colts</td><td>AFC South</td><td class="center">8.5</td><td class="center">0-0-0</td><td class="center">0</td></tr>
+          <tr><td>Jacksonville Jaguars</td><td>AFC South</td><td class="center">8.5</td><td class="center">0-0-0</td><td class="center">0</td></tr>
+          <tr><td>Kansas City Chiefs</td><td>AFC West</td><td class="center">11.5</td><td class="center">0-0-0</td><td class="center">0</td></tr>
+          <tr><td>Las Vegas Raiders</td><td>AFC West</td><td class="center">6.5</td><td class="center">0-0-0</td><td class="center">0</td></tr>
+          <tr><td>Los Angeles Chargers</td><td>AFC West</td><td class="center">8.5</td><td class="center">0-0-0</td><td class="center">0</td></tr>
+          <tr><td>Los Angeles Rams</td><td>NFC West</td><td class="center">8.5</td><td class="center">0-0-0</td><td class="center">0</td></tr>
+          <tr><td>Miami Dolphins</td><td>AFC East</td><td class="center">9.5</td><td class="center">0-0-0</td><td class="center">0</td></tr>
+          <tr><td>Minnesota Vikings</td><td>NFC North</td><td class="center">7.5</td><td class="center">0-0-0</td><td class="center">0</td></tr>
+          <tr><td>New England Patriots</td><td>AFC East</td><td class="center">4.5</td><td class="center">0-0-0</td><td class="center">0</td></tr>
+          <tr><td>New Orleans Saints</td><td>NFC South</td><td class="center">7.5</td><td class="center">0-0-0</td><td class="center">0</td></tr>
+          <tr><td>New York Giants</td><td>NFC East</td><td class="center">6.5</td><td class="center">0-0-0</td><td class="center">0</td></tr>
+          <tr><td>New York Jets</td><td>AFC East</td><td class="center">9.5</td><td class="center">0-0-0</td><td class="center">0</td></tr>
+          <tr><td>Philadelphia Eagles</td><td>NFC East</td><td class="center">10.5</td><td class="center">0-0-0</td><td class="center">0</td></tr>
+          <tr><td>Pittsburgh Steelers</td><td>AFC North</td><td class="center">8.5</td><td class="center">0-0-0</td><td class="center">0</td></tr>
+          <tr><td>San Francisco 49ers</td><td>NFC West</td><td class="center">11.5</td><td class="center">0-0-0</td><td class="center">0</td></tr>
+          <tr><td>Seattle Seahawks</td><td>NFC West</td><td class="center">7.5</td><td class="center">0-0-0</td><td class="center">0</td></tr>
+          <tr><td>Tampa Bay Buccaneers</td><td>NFC South</td><td class="center">7.5</td><td class="center">0-0-0</td><td class="center">0</td></tr>
+          <tr><td>Tennessee Titans</td><td>AFC South</td><td class="center">6.5</td><td class="center">0-0-0</td><td class="center">0</td></tr>
+          <tr><td>Washington Commanders</td><td>NFC East</td><td class="center">6.5</td><td class="center">0-0-0</td><td class="center">0</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</body>
+</html>
